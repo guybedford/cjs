@@ -5,7 +5,7 @@ Load CommonJS modules without needing to convert them to AMD.
 
 AMD and CommonJS are actually incredibly similar formats so this plugin is only 10 lines long.
 
-You have an amazing CommonJS module you want to load so you do - 
+To load a CommonJS module in RequireJS simply do - 
 
 ```javascript
   require(['cjs!my-commonjs-module'], function(mymodule) {
