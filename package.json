@@ -1,0 +1,10 @@
+{
+  "name": "cjs",
+  "version": "0.0.1",
+  "volo": {
+    "url": "https://raw.github.com/guybedford/cjs/{version}/cjs.js",
+    "dependencies": {
+      "amd-loader": "guybedford/amd-loader/0.0.1"
+    }
+  }
+}

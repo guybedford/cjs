@@ -1,0 +1,7 @@
+{
+  "name": "cjs",
+  "version": "0.0.1",
+  "dependencies": {
+    "amd-loader": "guybedford/amd-loader#0.0.1"
+  }
+}
