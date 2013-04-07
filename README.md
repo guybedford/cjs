@@ -23,8 +23,11 @@ Then it is dynamically converted into:
 
 ```javascript
   define(function(require, exports, module) {
-    var someDep = require('cjs!a-dependency');
-    exports.out = 'asdf';
+    (function() {
+      var define = undefined; // ensures any amd detection is disabled
+      var someDep = require('cjs!a-dependency');
+      exports.out = 'asdf';
+    })();
   });
 ```
 
