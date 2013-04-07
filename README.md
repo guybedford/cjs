@@ -38,7 +38,7 @@ Supports:
 * Precompilation with the `optimizeAllPluginResources` r.js build option
 * Amazingness
 
-Build with the [AMD-Loader plugin helper](https://github.com/guybedford/amd-loader).
+Built with the [AMD-Loader plugin helper](https://github.com/guybedford/amd-loader).
 
 Install
 ---
