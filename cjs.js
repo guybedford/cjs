@@ -10,6 +10,6 @@ define(['amd-loader'], function(amdLoader) {
         return ' require(\'' + dep + '\')';
     });
     // wrap up in common js wrapper
-    callback('define(function(require, exports, module) { (function(){var define=undefined;' + source + ' \n})() });');
+    callback('define(function(require, exports, module) { (function(){var define=undefined;' + source + ' \n//# sourceURL=' + req.toUrl(name) + '\n})() });');
   });
 });
