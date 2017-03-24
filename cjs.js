@@ -1,11 +1,13 @@
-define(['amd-loader'], function(amdLoader) {
+define('cjs', ['amd-loader'], function(amdLoader) {
   var cjsRequireRegExp = /\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g;
   return amdLoader('cjs', 'js', function(name, source, req, callback, errback, config) {
     // replace internal relative requires with common js requires themselves
     // global requires are assumed to be requirejs requires
     source = source.replace(cjsRequireRegExp, function (match, dep) {
-      if (dep.substr(0, 1) == '.')
+      if (dep.substr(0, 1) == '.') {
+        if (dep.search(/\.js$/) == -1) dep = dep + '.js'
         return ' require(\'cjs!' + dep + '\')';
+      }
       else
         return ' require(\'' + dep + '\')';
     });
